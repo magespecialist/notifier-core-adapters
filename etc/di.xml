@@ -31,9 +31,7 @@
     <virtualType name="MSP\NotifierCoreAdapters\Model\Adapter\Telegram" type="MSP\Notifier\Model\Adapter">
         <arguments>
             <argument name="engine" xsi:type="object">MSP\NotifierCoreAdapters\Model\AdapterEngine\Telegram</argument>
-            <argument name="validatorChain" xsi:type="object">
-                MSP\NotifierCoreAdapters\Model\AdapterEngine\ValidatorChain\Telegram
-            </argument>
+            <argument name="validatorChain" xsi:type="object">MSP\NotifierCoreAdapters\Model\AdapterEngine\ValidatorChain\Telegram</argument>
             <argument name="code" xsi:type="string">telegram</argument>
             <argument name="name" xsi:type="string">Telegram</argument>
             <argument name="description" xsi:type="string">Telegram Messenger</argument>
@@ -98,9 +96,7 @@
                       xsi:type="object">MSP\Notifier\Model\AdapterEngine\MessageValidator\Required</item>
             </argument>
             <argument name="paramsValidators" xsi:type="array">
-                <item name="required" xsi:type="object">
-                    MSP\NotifierCoreAdapters\Model\AdapterEngine\ParamsValidator\Slack\Required
-                </item>
+                <item name="required" xsi:type="object">MSP\NotifierCoreAdapters\Model\AdapterEngine\ParamsValidator\Slack\Required</item>
             </argument>
         </arguments>
     </virtualType>
@@ -138,9 +134,7 @@
                       xsi:type="object">MSP\Notifier\Model\AdapterEngine\MessageValidator\Required</item>
             </argument>
             <argument name="paramsValidators" xsi:type="array">
-                <item name="required" xsi:type="object">
-                    MSP\NotifierCoreAdapters\Model\AdapterEngine\ParamsValidator\Email\Required
-                </item>
+                <item name="required" xsi:type="object">MSP\NotifierCoreAdapters\Model\AdapterEngine\ParamsValidator\Email\Required</item>
             </argument>
         </arguments>
     </virtualType>
