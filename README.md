@@ -1,1 +1,1 @@
-# notifier-core-adapters
+Please refer to: https://github.com/magespecialist/notifier .
