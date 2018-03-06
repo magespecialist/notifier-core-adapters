@@ -34,17 +34,17 @@ class Telegram implements AdapterEngineInterface
 
     /**
      * Execute engine and return true on success. Throw exception on failure.
-     * @param string $emailMessage
+     * @param string $message
      * @param array $params
      * @return bool
      * @throws \Telegram\Bot\Exceptions\TelegramSDKException
      */
-    public function execute(string $emailMessage, array $params = []): bool
+    public function execute(string $message, array $params = []): bool
     {
         $client = $this->clientRepository->get($params[self::PARAM_TOKEN]);
         $client->sendMessage([
             'chat_id' => $params[self::PARAM_CHAT_ID],
-            'text' => $emailMessage,
+            'text' => $message,
             'parse_mode' => 'HTML'
         ]);
 
