@@ -138,4 +138,26 @@
             </argument>
         </arguments>
     </virtualType>
+
+    <virtualType name="MSP\Notifier\Ui\DataProvider\Form\Channel\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="telegram" xsi:type="array">
+                    <item name="class"
+                          xsi:type="string">MSP\NotifierCoreAdapters\Ui\DataProvider\Form\Channel\Modifier\Telegram</item>
+                    <item name="sortOrder" xsi:type="number">1000</item>
+                </item>
+                <item name="slack" xsi:type="array">
+                    <item name="class"
+                          xsi:type="string">MSP\NotifierCoreAdapters\Ui\DataProvider\Form\Channel\Modifier\Slack</item>
+                    <item name="sortOrder" xsi:type="number">1000</item>
+                </item>
+                <item name="email" xsi:type="array">
+                    <item name="class"
+                          xsi:type="string">MSP\NotifierCoreAdapters\Ui\DataProvider\Form\Channel\Modifier\Email</item>
+                    <item name="sortOrder" xsi:type="number">1000</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>
