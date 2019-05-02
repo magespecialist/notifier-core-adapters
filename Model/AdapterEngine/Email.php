@@ -55,12 +55,13 @@ class Email implements AdapterEngineInterface
     public function execute(string $message, array $params = []): bool
     {
         $lines = explode("\n", $message);
+        $to = preg_split("/\\r\\n/", $params['to']);
 
         $emailMessage = $this->messageFactory->create();
 
         $emailMessage->setFrom($params['from'], $params['from_name']);
-        $emailMessage->addTo($params['to']);
-        $emailMessage->setMessageType(MessageInterface::TYPE_TEXT);
+        $emailMessage->addTo($to);
+        $emailMessage->setMessageType(MessageInterface::TYPE_HTML);
         $emailMessage->setBody($message);
         $emailMessage->setSubject($lines[0]);
 
