@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace MSP\NotifierCoreAdapters\Model\AdapterEngine;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Maknz\Slack\Client;
+use Razorpay\Slack\Client;
 use MSP\Notifier\Model\AdapterEngine\AdapterEngineInterface;
 
 class Slack implements AdapterEngineInterface
@@ -53,7 +53,7 @@ class Slack implements AdapterEngineInterface
             'fallback' => $message,
             'text' => $message,
             'color' => $params[static::PARAM_COLOR] ?: static::DEFAULT_COLOR
-        ])->send();
+        ])->send($message);
 
         return true;
     }
