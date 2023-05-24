@@ -5,7 +5,7 @@
         "php": "^7.0|^7.1|^7.2|^8.1|^8.2",
         "msp/module-notifier": "^0",
         "magento/magento2-base": "^2.2|^2.3",
-        "maknz/slack": "^1.7",
+        "razorpay/slack": "^2.0",
         "irazasyed/telegram-bot-sdk": "^2.2"
     },
     "support": {
