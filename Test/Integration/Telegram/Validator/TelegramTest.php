@@ -19,7 +19,7 @@ class TelegramTest extends \PHPUnit\Framework\TestCase
     /**
      * @inheritdoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         // @codingStandardsIgnoreStart
         $this->adapterTelegram = Bootstrap::getObjectManager()->get(
@@ -54,7 +54,7 @@ class TelegramTest extends \PHPUnit\Framework\TestCase
      */
     public function testInvalidParams()
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         $this->adapterTelegram->validateParams([
             'token' => null,
         ]);
